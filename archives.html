@@ -14,8 +14,9 @@
         <meta name="description" content="我不在江湖就在去江湖的路上" />
         <meta name="author" content="奈文摩尔" />
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-
+    <!--><link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"><-->
+	<!-- 上面是谷歌字体,墙内加载很慢,改成用360的CDN加速,http://libs.useso.com/这是官方网址 -->
+	<link href="https://fonts.useso.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://windless1015.github.io/theme/css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -102,12 +103,29 @@
         <h1 class="fh5co-heading-colored">存档</h1>
         <div class="archive">
                 <div class="animate-box" data-animate-effect="fadeInLeft">
-                    <a href="https://windless1015.github.io/hiking.html"><h2>远足</h2></a>
+                    <a href="https://windless1015.github.io/builtmywebsite.html"><h2>使用Pelican建立个人博客</h2></a>
                     <div>被
-                            <a href="author/nai-wen-mo-er.html">奈文摩尔</a> - 周一, 12 2月 2018
+                            <a href="author/nevermore.html">nevermore</a> - 周四, 02 8月 2018
                     </div>
-                    <p class="first last">Hiking in the swiss alps.</p>
-
+                    <h1>建站记录</h1>
+<h3>使用Pelican</h3>
+<p><a href="http://getpelican.com/">Pelican</a>是一个静态页面生成器,类似<a href="https://jekyllrb.com/">Jekyll</a>和<a href="https://hexo.io/zh-cn/">Hexo</a>,很适合实现快速搭建博客的需要.所谓静态页面就是浏览器直接读取显示网页,无法经过服务器的编译,很适合做简单的内容展示,但是它的缺点是没有后台数据库的支持,交互性不强,不过作为个人博客是完全够用的.</p>
+<h3>windows下利用Pelican建站流程</h3>
+<h4>下载必要的软件</h4>
+<p>现在做windows软件和算法开发,故这里以windows下创建作为例程.所需要的所有工具为:</p>
+<ul>
+<li><em><a href="https://www.python.org/downloads/">Python3.7</a></em></li>
+<li><em><a href="https://pip.pypa.io/en/latest/installing/#id7">pip</a></em></li>
+<li><em><a href="https://git-scm.com/download/win">Git</a></em></li>
+<li><em><a href="http://getpelican.com/">Pelican</a></em></li>
+<li><em><a href="http://markdownpad.com/download/markdownpad2-setup.exe">markdownpad2</a></em></li>
+<li><em><a href="https://sourceforge.net/projects/mingw/files/">MinGW</a></em></li>
+</ul>
+<p>Python,git,markdownpad2,MinGW都可以直接下载(注意针对markdownpad2还需要下载一个<a href="https://link.zhihu.com/?target=http%3A//markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe">Awesomium 1.6.6 SDK</a>)</p>
+<p>pip我是使用 <code>easy_install pip</code></p>
+<p>Pelican可以直接使用 <code>pip install Pelican</code></p>
+<h4>创建本地博客站点</h4>
+<p>创建一个文件夹,例如为Blog,邮件使用<strong>Git Bash …</strong></p>
                 </div>
         </div>
     </div>

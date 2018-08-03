@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>使用Pelican建立个人博客</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="nevermore" />
+    <meta name="description" content="建站记录 使用Pelican Pelican是一个静态页面生成器,类似Jekyll和Hexo,很适合实现快速搭建博客的需要.所谓静态页面就是浏览器直接读取显示网页,无法经过服务器的编译,很适合做简单的内容展示,但是它的缺点是没有后台数据库的支持,交互性不强,不过作为个人博客是完全够用的. windows下利用Pelican建站流程 下载必要的软件 现在做windows软件和算法开发,故这里以windows下创建作为例程.所需要的所有工具为: Python3.7 pip Git Pelican markdownpad2 MinGW Python,git,markdownpad2,MinGW都可以直接下载(注意针对markdownpad2还需要下载一个Awesomium 1.6.6 SDK) pip我是使用 easy_install pip Pelican可以直接使用 pip install Pelican 创建本地博客站点 创建一个文件夹,例如为Blog,邮件使用Git Bash …" />
+    <meta name="keywords" content="建站">
+<!-- Facebook and Twitter integration -->
+<meta property="og:site_name" content="小雨落梧桐"/>
+<meta property="og:title" content="使用Pelican建立个人博客"/>
+<meta property="og:description" content="建站记录 使用Pelican Pelican是一个静态页面生成器,类似Jekyll和Hexo,很适合实现快速搭建博客的需要.所谓静态页面就是浏览器直接读取显示网页,无法经过服务器的编译,很适合做简单的内容展示,但是它的缺点是没有后台数据库的支持,交互性不强,不过作为个人博客是完全够用的. windows下利用Pelican建站流程 下载必要的软件 现在做windows软件和算法开发,故这里以windows下创建作为例程.所需要的所有工具为: Python3.7 pip Git Pelican markdownpad2 MinGW Python,git,markdownpad2,MinGW都可以直接下载(注意针对markdownpad2还需要下载一个Awesomium 1.6.6 SDK) pip我是使用 easy_install pip Pelican可以直接使用 pip install Pelican 创建本地博客站点 创建一个文件夹,例如为Blog,邮件使用Git Bash …"/>
+<meta property="og:url" content="https://windless1015.github.io/builtmywebsite.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-08-02 16:46:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://windless1015.github.io/author/nevermore.html">
+<meta property="article:section" content="tech_record"/>
+    <meta property="article:tag" content="建站"/>
+    <meta property="og:image" content="/images/logo.svg">
+
+    <!--><link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"><-->
+	<!-- 上面是谷歌字体,墙内加载很慢,改成用360的CDN加速,http://libs.useso.com/这是官方网址 -->
+	<link href="https://fonts.useso.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://windless1015.github.io/theme/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="https://windless1015.github.io/theme/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://windless1015.github.io/theme/css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="https://windless1015.github.io/theme/css/flexslider.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="https://windless1015.github.io/theme/css/style.css">
+    <!-- Custom style  -->
+    <link rel="stylesheet" href="https://windless1015.github.io/theme/css/custom.css">
+    <!-- pygments code highlight -->
+    <link rel="stylesheet" href="https://windless1015.github.io/theme/css/pygments.css">
+    <!-- tipue search -->
+    <link rel="stylesheet" href="https://windless1015.github.io/theme/tipuesearch/css/tipuesearch.css">
+
+    <!-- Modernizr JS -->
+    <script src="https://windless1015.github.io/theme/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="/theme/js/respond.min.js"></script>
+    <![endif]-->
+        <link href="https://windless1015.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="小雨落梧桐 Atom">
+
+
+
+    </head>
+    <body>
+    <div id="fh5co-page">
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+        <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+
+            <nav class="fh5co-main-menu" role="navigation">
+    <ul class="language-navigation">
+        <li>
+                <a class="lang-active" href="https://windless1015.github.io/">zh</a>
+                <a href="https://windless1015.github.io/en/">en</a>
+        </li>
+    </ul>
+            </nav>
+            <div class="clearfix"></div>
+            <h1  id="fh5co-logo">
+                <a href="https://windless1015.github.io/index.html">
+                    <img src="/images/logo.svg" />
+                </a>
+            </h1>
+            <nav class="fh5co-main-menu" role="navigation">
+<ul>
+    <!-- home link -->
+    <li><a href="https://windless1015.github.io/">首页</a></li>
+
+    <!-- page links -->
+            <li><a href="https://windless1015.github.io/pages/about.html">关于</a></li>
+
+    <!-- categories -->
+        <li><a href="https://windless1015.github.io/categories.html">目录</a></li>
+
+    <!-- tags -->
+        <li><a href="https://windless1015.github.io/tags.html">标签</a></li>
+
+    <!-- additional menu items from config -->
+        <!-- <li class="nav-title">杂项</li> -->
+            <li><a href="https://windless1015.github.io/archives.html">存档</a></li>
+            <li><a href="https://windless1015.github.io/contact.html">联络</a></li>
+
+</ul><ul><li><form id="searchform" action="https://windless1015.github.io/search.html">
+    <input id="tipue_search_input" data-siteurl="https://windless1015.github.io" type="text" size="60" class="form-control search-field" name="q">
+
+    <button type="submit" class="btn btn-primary search-submit"><i class="icon-search4"></i></button>
+</form></li></ul>
+            </nav>
+
+<ul id="social">
+            <li><a href="https://www.github.com/windless1015/" alt="Github"><i class="icon-github"></i></a></li>
+
+</ul>
+        </aside>
+
+        <div id="fh5co-main">
+
+    <div class="fh5co-narrow-content article-content">
+        <h1 class="fh5co-heading-colored">使用Pelican建立个人博客</h1>
+
+        <div>被
+                <a href="author/nevermore.html">nevermore</a> - 周四, 02 8月 2018
+        </div>
+
+            <div><span>Tags: </span>
+                    <span><a href="https://windless1015.github.io/tag/jian-zhan.html">#建站</a> </span>
+            </div>
+
+        <div class="animate-box" data-animate-effect="fadeInLeft">
+            <p class="animate-box" data-animate-effect="fadeInLeft"><h1>建站记录</h1>
+<h3>使用Pelican</h3>
+<p><a href="http://getpelican.com/">Pelican</a>是一个静态页面生成器,类似<a href="https://jekyllrb.com/">Jekyll</a>和<a href="https://hexo.io/zh-cn/">Hexo</a>,很适合实现快速搭建博客的需要.所谓静态页面就是浏览器直接读取显示网页,无法经过服务器的编译,很适合做简单的内容展示,但是它的缺点是没有后台数据库的支持,交互性不强,不过作为个人博客是完全够用的.</p>
+<h3>windows下利用Pelican建站流程</h3>
+<h4>下载必要的软件</h4>
+<p>现在做windows软件和算法开发,故这里以windows下创建作为例程.所需要的所有工具为:</p>
+<ul>
+<li><em><a href="https://www.python.org/downloads/">Python3.7</a></em></li>
+<li><em><a href="https://pip.pypa.io/en/latest/installing/#id7">pip</a></em></li>
+<li><em><a href="https://git-scm.com/download/win">Git</a></em></li>
+<li><em><a href="http://getpelican.com/">Pelican</a></em></li>
+<li><em><a href="http://markdownpad.com/download/markdownpad2-setup.exe">markdownpad2</a></em></li>
+<li><em><a href="https://sourceforge.net/projects/mingw/files/">MinGW</a></em></li>
+</ul>
+<p>Python,git,markdownpad2,MinGW都可以直接下载(注意针对markdownpad2还需要下载一个<a href="https://link.zhihu.com/?target=http%3A//markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe">Awesomium 1.6.6 SDK</a>)</p>
+<p>pip我是使用 <code>easy_install pip</code></p>
+<p>Pelican可以直接使用 <code>pip install Pelican</code></p>
+<h4>创建本地博客站点</h4>
+<p>创建一个文件夹,例如为Blog,邮件使用<strong>Git Bash Here</strong>在本地使用命令行,输入<strong>pelican-quickstart</strong>.执行命令后,程序会提示输入博客的配置项,除了几个必填的其他的都可以选择默认.其实最后这些参数都可以在pelicanconf.py文件中进行修改.在Blog文件夹内会看到以下几个文件夹:content/(存放markdown或rst源文件,即你的博客的内容),output/(存放利用pelican生成的静态博客文件),pelicanconf.py是博客配置文件,主要的就是这几个,其他的可以忽略.此时在Blog目录下执行<code>pelican content</code>,就会在output文件夹下生成博客.这时候再进入到output目录下,执行<code>python -m pelican.server 8081</code>(指定端口,也可以不指定而使用默认的),这时候去浏览器执行<code>localhost:8081</code>就可以显示博客了.</p>
+<h4>使用主题</h4>
+<p>可以使用主题让自己的博客更加漂亮和绚丽.先从pelican的官方主题<a href="http://pelicanthemes.com/">pelicanthemes</a>挑选自己喜欢的主题,但是后来又有很多新的主题,都存放在<a href="https://github.com/getpelican/pelican-themes">pelican主题库</a>上,可以去看.看好某一个主题之后,把这个主题的分支clone到本地,放置的路径最好和Blog同级,这样在pelicanconf.py里面的THEME选项便于设置.比如可以设置相对路径.</p>
+<h4>创建github个人主页</h4>
+<p>github给用户提供了个人主页,进入自己的github页面,创建一个名为username.github.io的仓库,然后在settings里面设置个人的域名,设置完毕会在仓库中生成一个CNAME的文件,这个文件很重要否则不能使用独立域名,同时github会有一个选项是Enforce https,可以勾选,你的主页就走的是https的流量,然后把output的内容推送到github上,在浏览器里面输入刚才的地址就可以看到页面效果.</p>
+<h4>给github个人主页使用独立域名</h4>
+<p>我是在name.com上购买的域名,在域名管理的地方填写github的地址(使用ping username.github.io)得到.即可实现独立域名访问个人博客.</p>
+<h4>解决谷歌字体加载过慢的问题</h4>
+<p>由于我使用的pelican主题中使用了google font的apis函数,而我大天朝访问谷歌是访问不了的.虽然我常年vpn挂着,但是速度也相对较慢.网上有几种方法:1.把谷歌字体下载下来放到github上,这种就是本地读取2.使用国内公共CDN镜像.我选的是第二种.<a href="http://libs.useso.com/">360公共镜像</a>,上面有怎么替换的方式.但是我看也有人说360的这个镜像库关闭了,但是我还是可以登录,可是有时候这个页面会打不开.在主题模版里面搜索fonts.googleapis.com,然后进行替换成cdn的地址即可.</p></p>
+        </div>
+    </div>
+
+<div class="fh5co-narrow-content">
+<div class="animate-box" data-animate-effect="fadeInLeft">
+    <h2><!-- <i class="icon-speech-bubble"></i>  -->评论</h2>
+</div>
+<div class="animate-box" data-animate-effect="fadeInLeft">
+    <div id="disqus_thread"></div>
+</div>
+
+<script>
+var disqus_config = function () { 
+  this.language = "zh";
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gitcd-dev.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript><a href="https://disqus.com/?ref_noscript">请激活JavaScript来查看由Disqus提供的评论</a></noscript>
+<div class="fh5co-footer">
+    <!--<p><small>&copy; 2016 Blend Free HTML5. All Rights Reserved.</span> <span>Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a></span>
+    <br /><span>Pelican Theme by: <a href="https://github.com/claudio-walser/pelican-fh5co-marble" target="_blank">Claudio Walser</a></span></small></p>
+	-->
+</div>                
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://windless1015.github.io/theme/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="https://windless1015.github.io/theme/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://windless1015.github.io/theme/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="https://windless1015.github.io/theme/js/jquery.waypoints.min.js"></script>
+    <!-- Flexslider -->
+    <script src="https://windless1015.github.io/theme/js/jquery.flexslider-min.js"></script>
+
+
+    <!-- MAIN JS -->
+    <script src="https://windless1015.github.io/theme/js/main.js"></script>
+    </body>
+</html>
